@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "username": "Islam Ahmed",
+      "password": "123456",
+      "email": "islam@gmail.com",
+      "phone": "0123456789",
+      "country": "Egypt",
+      "role": "admin",
+      "id": "fbb4"
+    },
+    {
+      "username": "gamal",
+      "password": "",
+      "email": "gamal@gmail.com",
+      "phone": "1123456789",
+      "country": "kawit",
+      "role": "admin",
+      "id": "66c7"
+    },
+    {
+      "id": "a2a2",
+      "username": "gamal hamzea",
+      "password": "123465",
+      "email": "ammar@gmail.com",
+      "phone": "123456789",
+      "country": "egypt",
+      "role": "user"
+    },
+    {
+      "id": "7283",
+      "username": "new user",
+      "email": "new@gmail.com",
+      "phone": "123456156",
+      "country": "Egypt",
+      "role": "editor",
+      "password": ""
+    }
+  ]
+}

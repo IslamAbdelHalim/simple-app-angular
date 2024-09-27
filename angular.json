@@ -7,7 +7,8 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "standalone": false
+          "standalone": false,
+          "displayBlock": true
         },
         "@schematics/angular:directive": {
           "standalone": false
@@ -33,13 +34,17 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "src/assets",
+                "output": "/assets"
               }
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ],
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {
@@ -107,5 +112,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "5ee29e6c-a04e-4630-9cce-ad91511d8ab6"
   }
 }

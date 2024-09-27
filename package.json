@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:web-app": "node dist/web-app/server/server.mjs"
+    "serve:ssr:web-app": "node dist/web-app/server/server.mjs",
+    "server": "json-server --watch db.json --port 5000"
   },
   "private": true,
   "dependencies": {
@@ -21,7 +22,10 @@
     "@angular/platform-server": "^18.2.0",
     "@angular/router": "^18.2.0",
     "@angular/ssr": "^18.2.1",
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.3",
     "express": "^4.18.2",
+    "json-server": "^1.0.0-beta.3",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.10"

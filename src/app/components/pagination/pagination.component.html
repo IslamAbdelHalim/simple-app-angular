@@ -1,0 +1,25 @@
+<h2 class="text-center mt-5">Pagination</h2>
+
+<div class="container my-5">
+  <div class="image-container text-center">
+    <img src="assets/images/wall{{current}}.jpg" id="image-display" alt="image {{current}}" class="img-fluid">
+  </div>
+
+  <nav aria-label="Page navigation example">
+    <ul class="pagination d-flex justify-content-center">
+      <li class="page-item" [class.disabled]="current === 1">
+        <a class="page-link"  aria-label="Previous" (click)="changeImage('prev')">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li class="page-item" *ngFor="let image of images; let i = index" [class.active]=" i + 1 === current">
+        <a class="page-link"  (click)="changeImage(i+1)">{{ i + 1}}</a>
+      </li>
+      <li class="page-item" [class.disabled]="current === total">
+        <a class="page-link" aria-label="Next" (click)="changeImage('next')">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>

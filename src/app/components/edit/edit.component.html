@@ -1,0 +1,33 @@
+<div class="container update mt-3">
+  <form method="post" (ngSubmit)="update()">
+    <div>
+      <label class="form-label" for="user">Username</label>
+      <input type="email" class="form-control" id="user" name="username" [(ngModel)]="username">
+    </div>
+    <div class="my-3">
+      <label class="form-label" for="email">Email</label>
+      <input type="email" class="form-control" id="email" name="email"  [(ngModel)]="email">
+    </div>
+    <label class="form-label d-block" for="phone">Phone</label>
+    <div class="input-group my-3">
+      <select name="country-code" class="form-select-sm bg-primary text-light">
+        <option value="+20">+20</option>
+        <option value="+900">+900</option>
+        <option value="+969">+969</option>
+        <option value="+500">+500</option>
+      </select>
+      <input type="text" class="form-control" id="phone" name="phone"  [(ngModel)]="phone">
+    </div>
+    <div>
+      <label class="form-label" for="country">Country</label>
+      <input class="form-control" id="country" type="text" name="country"  [(ngModel)]="country">
+    </div>
+    <div>
+      <label class="form-label" for="role">Role</label>
+      <input class="form-control" id="role" type="text" name="role" [(ngModel)]="role">
+    </div>
+    <div class="d-grid mt-3 mb-5">
+      <input type="submit" value="update" class="btn btn-primary" >
+    </div>
+  </form>
+</div>

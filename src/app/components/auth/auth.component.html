@@ -1,0 +1,65 @@
+<div class="container my-5">
+  <div class="auth w-50 m-auto">
+    <div class="buttons">
+      <button type="button" class="btn btn-outline-dark rounded-top-3 rounded-bottom-0 ms-4" (click)="toggleForm(true)">Login</button>
+      <button type="button" class="btn btn-outline-dark rounded-top-3 rounded-bottom-0" (click)="toggleForm(false)">Register</button>
+    </div>
+    <div class="cont bg-dark text-bg-primary border p-5 rounded-5">
+      <div class="login mb-3" *ngIf="isLogin">
+        <form method="post" (ngSubmit)="login()">
+          <div>
+            <label class="form-label" for="username">Username</label>
+            <input type="text" name="username" class="form-control" id="username" placeholder="Enter your username" [(ngModel)]="username">
+          </div>
+          <div class="my-4">
+            <label class="form-label" for="password">Password</label>
+            <input type="password" name="password" class="form-control" id="password" placeholder="Enter you password" [(ngModel)]="password">
+          </div>
+          <div class="form-check mb-3 ps-0">
+            <label class="form-check-label" for="remember">
+              <input type="checkbox" id="remember" name="remember"> Remember me
+            </label>
+          </div>
+          <div class="d-grid">
+            <input type="submit" value="Login" class="btn btn-outline-info mt-3">
+          </div>
+        </form>
+        <p class="mt-5 text-center" [ngClass]="color">{{text}}</p>
+      </div>
+      <div class="signup" *ngIf="!isLogin">
+        <form method="post" (ngSubmit)="register()">
+          <div>
+            <label class="form-label" for="user">Username</label>
+            <input type="email" class="form-control" id="user" name="username" placeholder="Enter Your username" [(ngModel)]="username">
+          </div>
+          <div class="my-3">
+            <label class="form-label" for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter Your email" [(ngModel)]="email">
+          </div>
+          <div class="my-3">
+            <label class="form-label" for="Password2">Password</label>
+            <input type="password" class="form-control" id="password2" name="password" placeholder="Enter Your password" [(ngModel)]="password">
+          </div>
+          <label class="form-label d-block" for="phone">Phone</label>
+          <div class="input-group my-3">
+            <select name="country-code" class="form-select-sm bg-primary text-light">
+              <option value="+20">+20</option>
+              <option value="+900">+900</option>
+              <option value="+969">+969</option>
+              <option value="+500">+500</option>
+            </select>
+            <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter Your Phone" [(ngModel)]="phone">
+          </div>
+          <div>
+            <label class="form-label" for="country">Country</label>
+            <input class="form-control" id="country" type="text" name="country" placeholder="Enter Country" [(ngModel)]="country">
+          </div>
+          <div class="d-grid mt-3">
+            <input type="submit" value="Register" class="btn btn-primary" >
+          </div>
+          <p class="mt-5 text-center" [ngClass]="color">{{text}}</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
